@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "faker"
+# TODO: Write a seed to insert 100 posts in the database
+puts "Creating Articles"
+10.times do
+  Article.create(title: Faker::Movie.title, content: Faker::Books::CultureSeries.culture_ship)
+end
+puts "All done!"
